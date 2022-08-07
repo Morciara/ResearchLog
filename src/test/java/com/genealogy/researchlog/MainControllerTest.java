@@ -1,6 +1,6 @@
 package com.genealogy.researchlog;
 
-import com.genealogy.researchlog.controller.IndexController;
+import com.genealogy.researchlog.controller.MainController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,22 +11,22 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-public class IndexControllerTest {
+public class MainControllerTest {
 
 	private MockMvc mockMvc;
 
-	private IndexController indexController;
+	private MainController mainController;
 
 	@BeforeEach
 	public void setup(){
-		indexController = new IndexController();
-		mockMvc = MockMvcBuilders.standaloneSetup(indexController).build();
+		mainController = new MainController();
+		mockMvc = MockMvcBuilders.standaloneSetup(mainController).build();
 	}
 
 	@Test
 	public void testIndex() throws Exception{
 		mockMvc.perform(get("/"))
 				.andExpect(status().isOk())
-				.andExpect(view().name("index"));
+				.andExpect(view().name("home"));
 	}
 }
