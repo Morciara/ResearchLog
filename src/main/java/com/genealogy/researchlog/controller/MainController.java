@@ -11,9 +11,9 @@ public class MainController {
         return "home";
     }
 
-    @RequestMapping("/products")
+    @RequestMapping("/census1950")
     public String products() {
-        return "products";
+        return "census1950";
     }
 
     @RequestMapping("/about")
