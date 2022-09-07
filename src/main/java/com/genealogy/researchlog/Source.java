@@ -2,10 +2,10 @@ public class Source {
     private Integer sourceId;
     private Integer repositoryId;
     private String sourceName;
-	private String author;
-	private String callNbr;
-	private String webSite;
-	private String sourceNotes;
+    private String author;
+    private String callNbr;
+    private String webSite;
+    private String sourceNotes;
    
     public Source() {
     }
@@ -54,7 +54,7 @@ public class Source {
     }
 
     public void setRepositoryId(Integer repositoryId) {
-        this.libraryId = repositoryId;
+        this.repositoryId = repositoryId;
     }
 
     public String getAuthor() {
