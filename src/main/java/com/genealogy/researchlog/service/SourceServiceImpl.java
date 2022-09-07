@@ -1,8 +1,8 @@
 package com.genealogy.researchlog.service;
 
-import com.genealogy.researchlog.model.Product;
-//import ccom.genealogy.researchlog.ProductRepository;
-import com.com.genealogy.researchlog.ProductRepositoryImpl;
+import com.genealogy.researchlog.Source;
+import com.genealogy.researchlog.SourceRepository;
+import com.com.genealogy.researchlog.SourceRepositoryImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
@@ -15,42 +15,42 @@ public class SourceServiceImpl implements SourceService {
 
     private static final Logger logger = LogManager.getLogger(SourceServiceImpl.class);
 
-    private final ProductRepository productRepository;
+    private final SourceRepository sourceRepository;
 
-    public SourceServiceImpl(ProductRepository productRepository) {
-        this.productRepository = productRepository;
+    public SourceServiceImpl(SourceRepository sourceRepository) {
+        this.sourceRepository = sourceRepository;
     }
 
     @Override
     public Optional<Source> findById(Integer id) {
-        logger.info("Find product with id: {}", id);
-        return productRepository.findById(id);
+        logger.info("Find source with id: {}", id);
+        return sourceRepository.findById(id);
     }
 
     @Override
     public List<Source> findAll() {
-        logger.info("Find all products");
-        return productRepository.findAll();
+        logger.info("Find all source");
+        return sourceRepository.findAll();
     }
 
     @Override
     public boolean update(Source product) {
-        logger.info("Update product: {}", product);
-        return productRepository.update(product);
+        logger.info("Update source: {}", source);
+        return sourceRepository.update(source);
     }
 
     @Override
-    public Source save(Source product) {
-        // Set the product version to 1 as we're adding a new product to the database
-        product.setVersion(1);
+    public Source save(Source source) {
+        // Set the source version to 1 as we're adding a new source to the database
+        source.setVersion(1);
 
-        logger.info("Save product to the database: {}", product);
-        return productRepository.save(product);
+        logger.info("Save source to the database: {}", source);
+        return sourceRepository.save(source);
     }
 
     @Override
     public boolean delete(Integer id) {
-        logger.info("Delete product with id: {}", id);
-        return productRepository.delete(id);
+        logger.info("Delete source with id: {}", id);
+        return sourceRepository.delete(id);
     }
 }
