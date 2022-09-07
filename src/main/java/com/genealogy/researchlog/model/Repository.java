@@ -1,10 +1,10 @@
 public class Repository {
    private Integer repositoryId;
    private String name;
- 	 private String streetAddress;
-	 private String city;
-	 private String state;
-	 private String website;
+   private String streetAddress;
+   private String city;
+   private String state;
+   private String webSite;
    private String emailAddress;
 
    
