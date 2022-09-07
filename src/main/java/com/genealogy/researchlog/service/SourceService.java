@@ -1,7 +1,5 @@
 package com.genealogy.researchlog.service;
 
-import com.genealogy.researchlog;
-
 import java.util.List;
 import java.util.Optional;
 
