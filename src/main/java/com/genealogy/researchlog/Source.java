@@ -1,69 +1,101 @@
 public class Source {
-    private Integer id;
-    private String name;
-    private Integer quantity;
-    private Integer version;
-
+    private Integer sourceId;
+    private Integer libraryId;
+    private String sourceName;
+	private String author;
+	private String callNbr;
+	private String webSite;
+	private String sourceNotes;
+   
     public Source() {
     }
 
-    public Source(String name, int quantity) {
-        this.name = name;
-        this.quantity = quantity;
+    public Source(String sourceName, int libraryId) {
+        this.sourceName = sourceName;
+        this.libraryId = libraryId;
     }
 
-    public Source(Integer id, String name, Integer quantity, Integer version) {
-        this.id = id;
-        this.name = name;
-        this.quantity = quantity;
-        this.version = version;
+    public Source(Integer sourceId, String sourceName, Integer libraryId, String author, 
+	              String callNbr, String webSite, String sourceNotes) {
+        this.sourceId = sourceId;
+        this.sourceName = sourceName;
+        this.libraryId = libraryId;
+        this.author = author;
+		this.callNbr = callNbr;
+		this.webSite = webSite;
+		this.sourceNotes = sourceNotes;
+		
     }
 
-    public Source(Integer id, String name, Integer quantity) {
-        this.id = id;
-        this.name = name;
-        this.quantity = quantity;
+    public Source(Integer sourceId, String sourceName, Integer libraryId) {
+        this.sourceId = sourceId;
+        this.sourceName = sourceName;
+        this.libraryId = libraryId;
+    }
+	
+    public Integer getSourceId() {
+        return sourceId;
     }
 
-    public Integer getId() {
-        return id;
+    public void setSourceId(Integer sourceId) {
+        this.sourceId = sourceId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public String getSourceName() {
+        return sourceName;
     }
 
-    public String getName() {
-        return name;
+    public void setSourceName(String sourceName) {
+        this.sourceName = sourceName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Integer getLibraryId() {
+        return libraryId;
     }
 
-    public Integer getQuantity() {
-        return quantity;
+    public void setLibraryId(Integer libraryId) {
+        this.libraryId = libraryId;
     }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
+    public String getAuthor() {
+        return author;
     }
 
-    public Integer getVersion() {
-        return version;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public void setVersion(Integer version) {
-        this.version = version;
+    public String getCallNbr() {
+        return callNbr;
+    }
+
+    public void setCallNbr(String callNbr) {
+        this.callNbr = callNbr;
+    }
+   
+    public String getWebSite() {
+        return webSite;
+    }
+
+    public void setWebSite(String webSite) {
+        this.webSite = webSite;
+    }
+	
+	 public String getSourceNotes() {
+        return sourceNotes;
+    }
+
+    public void setSourceNotes(String sourceNotes) {
+        this.sourceNotes = sourceNotes;
     }
 
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", quantity=" + quantity +
-                ", version=" + version +
+        return "Souce{" +
+                "id=" + sourceId +
+                ", name='" + sourceName + '\'' +
+                ", author=" + author +
+                ", notes=" + sourceNotes +
                 '}';
     }
 }
