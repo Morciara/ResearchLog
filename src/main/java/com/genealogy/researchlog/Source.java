@@ -1,6 +1,6 @@
 public class Source {
     private Integer sourceId;
-    private Integer libraryId;
+    private Integer repositoryId;
     private String sourceName;
 	private String author;
 	private String callNbr;
@@ -10,27 +10,27 @@ public class Source {
     public Source() {
     }
 
-    public Source(String sourceName, int libraryId) {
+    public Source(String sourceName, int repositoryId) {
         this.sourceName = sourceName;
-        this.libraryId = libraryId;
+        this.repositoryId = repositoryId;
     }
 
-    public Source(Integer sourceId, String sourceName, Integer libraryId, String author, 
+    public Source(Integer sourceId, String sourceName, Integer repositoryId, String author, 
 	              String callNbr, String webSite, String sourceNotes) {
         this.sourceId = sourceId;
         this.sourceName = sourceName;
-        this.libraryId = libraryId;
+        this.repositoryId = repositoryId;
         this.author = author;
-		this.callNbr = callNbr;
-		this.webSite = webSite;
-		this.sourceNotes = sourceNotes;
+	this.callNbr = callNbr;
+	this.webSite = webSite;
+	this.sourceNotes = sourceNotes;
 		
     }
 
-    public Source(Integer sourceId, String sourceName, Integer libraryId) {
+    public Source(Integer sourceId, String sourceName, Integer repositoryId) {
         this.sourceId = sourceId;
         this.sourceName = sourceName;
-        this.libraryId = libraryId;
+        this.repositoryId = repositoryId;
     }
 	
     public Integer getSourceId() {
@@ -49,12 +49,12 @@ public class Source {
         this.sourceName = sourceName;
     }
 
-    public Integer getLibraryId() {
-        return libraryId;
+    public Integer getRepositoryId() {
+        return repositoryId;
     }
 
-    public void setLibraryId(Integer libraryId) {
-        this.libraryId = libraryId;
+    public void setRepositoryId(Integer repositoryId) {
+        this.libraryId = repositoryId;
     }
 
     public String getAuthor() {
@@ -81,7 +81,7 @@ public class Source {
         this.webSite = webSite;
     }
 	
-	 public String getSourceNotes() {
+    public String getSourceNotes() {
         return sourceNotes;
     }
 
