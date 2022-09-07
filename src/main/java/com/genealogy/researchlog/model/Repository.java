@@ -53,7 +53,7 @@ public class Repository {
         return streetAddress;
     }
 
-    public void setStreetAddress(Integer streetAddress) {
+    public void setStreetAddress(String streetAddress) {
         this.streetAddress = streetAddress;
     }
 
