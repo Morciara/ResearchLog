@@ -1,3 +1,5 @@
+package com.genealogy.researchlog.model;
+
 public class Repository {
    private Integer repositoryId;
    private String name;
