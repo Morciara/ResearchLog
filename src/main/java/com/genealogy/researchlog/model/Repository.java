@@ -49,7 +49,7 @@ public class Repository {
         this.name = name;
     }
 
-	  public Integer getStreetAddress() {
+    public String getStreetAddress() {
         return streetAddress;
     }
 
@@ -81,7 +81,7 @@ public class Repository {
         this.webSite = webSite;
     }
 	
-	 public String getEmailAddress() {
+    public String getEmailAddress() {
         return emailAddress;
     }
 
@@ -94,7 +94,7 @@ public class Repository {
         return "Repository{" +
                 "id=" + repositoryId +
                 ", name='" + name + '\'' +
-                ", website=" + website +
+                ", website=" + webSite +
                 '}';
     }
 }
