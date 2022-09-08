@@ -14,9 +14,9 @@ public interface SourceService {
     Optional<Source> findById(Integer id);
 
     /**
-     * Returns all products in the database.
+     * Returns all source in the database.
      *
-     * @return          All products in the database.
+     * @return          All source in the database.
      */
     List<Source> findAll();
 
