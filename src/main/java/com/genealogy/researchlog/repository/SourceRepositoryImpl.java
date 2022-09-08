@@ -1,6 +1,6 @@
 package com.genealogy.researchlog.repository;
 
-import com.genealogy.researchlog.Source;
+import com.genealogy.researchlog.model.Source;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.dao.EmptyResultDataAccessException;
