@@ -2,6 +2,7 @@ package com.genealogy.researchlog.service;
 
 import java.util.List;
 import java.util.Optional;
+import com.genealogy.researchlog.model.Source;
 
 public interface SourceService {
     /**
