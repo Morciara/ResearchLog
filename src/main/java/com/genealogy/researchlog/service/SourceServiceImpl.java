@@ -1,6 +1,7 @@
 package com.genealogy.researchlog.service;
 
 import com.genealogy.researchlog.model.Source;
+import com.genealogy.researchlog.repository.SourceRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class SourceServiceImpl implements SourceService {
     }
 
     @Override
-    public boolean update(Source product) {
+    public boolean update(Source source) {
         logger.info("Update source: {}", source);
         return sourceRepository.update(source);
     }
