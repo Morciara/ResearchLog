@@ -1,45 +1,59 @@
 package com.genealogy.researchlog.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
+@Document("Source")
 public class Source {
-    private Integer sourceId;
-    private Integer repositoryId;
+    @Id
+    private String sourceId;
+    @Field("Archive_ID")
+    private String archiveId;
+    @Field("Source")
+    @Indexed
     private String sourceName;
+    @Field("Author")
+    @Indexed
     private String author;
+    @Field("Call_Nbr")
+    @Indexed
     private String callNbr;
-    private String webSite;
+    @Field("Notes")
+    @Indexed
     private String sourceNotes;
    
     public Source() {
     }
 
-    public Source(String sourceName, int repositoryId) {
+    public Source(String sourceName, String archiveId) {
         this.sourceName = sourceName;
-        this.repositoryId = repositoryId;
+        this.archiveId = archiveId;
     }
 
-    public Source(Integer sourceId, String sourceName, Integer repositoryId, String author, 
-	              String callNbr, String webSite, String sourceNotes) {
+    public Source(String sourceId, String sourceName, String archiveId, String author,
+                  String callNbr, String sourceNotes) {
         this.sourceId = sourceId;
         this.sourceName = sourceName;
-        this.repositoryId = repositoryId;
+        this.archiveId = archiveId;
         this.author = author;
 	this.callNbr = callNbr;
-	this.webSite = webSite;
 	this.sourceNotes = sourceNotes;
 		
     }
 
-    public Source(Integer sourceId, String sourceName, Integer repositoryId) {
+    public Source(String sourceId, String sourceName, String archiveId) {
         this.sourceId = sourceId;
         this.sourceName = sourceName;
-        this.repositoryId = repositoryId;
+        this.archiveId = archiveId;
     }
 	
-    public Integer getSourceId() {
+    public String getSourceId() {
         return sourceId;
     }
 
-    public void setSourceId(Integer sourceId) {
+    public void setSourceId(String sourceId) {
         this.sourceId = sourceId;
     }
 
@@ -51,12 +65,12 @@ public class Source {
         this.sourceName = sourceName;
     }
 
-    public Integer getRepositoryId() {
-        return repositoryId;
+    public String getArchiveId() {
+        return archiveId;
     }
 
-    public void setRepositoryId(Integer repositoryId) {
-        this.repositoryId = repositoryId;
+    public void setArchiveId(String archiveId) {
+        this.archiveId = archiveId;
     }
 
     public String getAuthor() {
@@ -74,15 +88,7 @@ public class Source {
     public void setCallNbr(String callNbr) {
         this.callNbr = callNbr;
     }
-   
-    public String getWebSite() {
-        return webSite;
-    }
 
-    public void setWebSite(String webSite) {
-        this.webSite = webSite;
-    }
-	
     public String getSourceNotes() {
         return sourceNotes;
     }

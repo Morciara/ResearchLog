@@ -6,8 +6,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 
-@Document("Repository")
-public class Repository {
+@Document("Archive")
+public class Archive {
    @Id
    private String id;
    @Field("name")
@@ -25,16 +25,16 @@ public class Repository {
     private String emailAddress;
 
    
-    public Repository() {
+    public Archive() {
     }
 
-    public Repository(String name, String id) {
+    public Archive(String name, String id) {
         this.name = name;
         this.id = id;
     }
 
-    public Repository(String id, String name, String streetAddress, String city,
-	              String state, String webSite, String emailAddress) {
+    public Archive(String id, String name, String streetAddress, String city,
+                   String state, String webSite, String emailAddress) {
         this.id = id;
         this.name = name;
         this.streetAddress = streetAddress;
@@ -44,7 +44,7 @@ public class Repository {
     		this.emailAddress = emailAddress;
     }
 
-    public Repository(String id, String name, String webSite) {
+    public Archive(String id, String name, String webSite) {
 
         this.id = id;
         this.name = name;
