@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Document("Repository")
 public class Repository {
    @Id
-   private Integer repositoryId;
+   private String id;
    @Field("name")
    @Indexed
    private String name;
@@ -28,14 +28,14 @@ public class Repository {
     public Repository() {
     }
 
-    public Repository(String name, int repositoryId) {
+    public Repository(String name, String id) {
         this.name = name;
-        this.repositoryId = repositoryId;
+        this.id = id;
     }
 
-    public Repository(Integer repositoryId, String name, String streetAddress, String city, 
+    public Repository(String id, String name, String streetAddress, String city,
 	              String state, String webSite, String emailAddress) {
-        this.repositoryId = repositoryId;
+        this.id = id;
         this.name = name;
         this.streetAddress = streetAddress;
         this.city = city;
@@ -44,18 +44,19 @@ public class Repository {
     		this.emailAddress = emailAddress;
     }
 
-    public Repository(Integer repositoryId, String name, String webSite) {
-        this.repositoryId = repositoryId;
+    public Repository(String id, String name, String webSite) {
+
+        this.id = id;
         this.name = name;
         this.webSite = webSite;
     }
 	
-    public Integer getRepositoryId() {
-        return repositoryId;
+    public String getId() {
+        return id;
     }
 
-    public void setRepositoryId(Integer repositoryId) {
-        this.repositoryId = repositoryId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -109,7 +110,7 @@ public class Repository {
     @Override
     public String toString() {
         return "Repository{" +
-                "id=" + repositoryId +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", website=" + webSite +
                 '}';

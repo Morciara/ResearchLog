@@ -1,6 +1,7 @@
 package com.genealogy.researchlog.repository;
 
 import com.genealogy.researchlog.model.Source;
+import org.springframework.context.annotation.Bean;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,7 +9,9 @@ import java.util.Optional;
 /**
  * Defines the persistence methods for a SourceRepository.
  */
+
 public interface SourceRepository {
+    @Bean
     /**
      * Returns the source with the specified id.
      *
