@@ -1,13 +1,28 @@
 package com.genealogy.researchlog.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
+
+@Document("Repository")
 public class Repository {
+   @Id
    private Integer repositoryId;
+   @Field("name")
+   @Indexed
    private String name;
-   private String streetAddress;
-   private String city;
-   private String state;
-   private String webSite;
-   private String emailAddress;
+    @Field("address")
+    private String streetAddress;
+    @Field("city")
+    private String city;
+    @Field("state")
+    private String state;
+    @Field("web_site")
+    private String webSite;
+    @Field("email_address")
+    private String emailAddress;
 
    
     public Repository() {

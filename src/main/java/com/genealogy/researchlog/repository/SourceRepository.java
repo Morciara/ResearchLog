@@ -38,7 +38,7 @@ public interface SourceRepository {
      * @param source   The source to save to the database.
      * @return          The saved source.
      */
-    Product save(Source source);
+    Source save(Source source);
 
     /**
      * Deletes the source with the specified id.

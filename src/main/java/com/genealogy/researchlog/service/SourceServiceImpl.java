@@ -41,7 +41,7 @@ public class SourceServiceImpl implements SourceService {
     @Override
     public Source save(Source source) {
         // Set the source version to 1 as we're adding a new source to the database
-        source.setVersion(1);
+       // source.setVersion(1);
 
         logger.info("Save source to the database: {}", source);
         return sourceRepository.save(source);
