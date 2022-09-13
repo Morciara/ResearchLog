@@ -1,3 +1,5 @@
+package com.genealogy.researchlog.model;
+
 public class Source {
     private Integer sourceId;
     private Integer repositoryId;
