@@ -45,14 +45,14 @@ public class Person {
     public Person(String personId, String legacyId, String surname, String givenName, String middleName,
                    String dob, String dod, String familySearchId, String findAGraveId) {
         this.personId = personId;
-	    this.legacyId = legacyId;
+	this.legacyId = legacyId;
         this.surname = surname;
         this.givenName = givenName;
         this.middleName = middleName;
-	    this.dob = dob;
-   		this.dod = dod;
+	this.dob = dob;
+   	this.dod = dod;
     	this.familySearchId = familySearchId;
-		this.findAGraveId = findAGraveId;
+	this.findAGraveId = findAGraveId;
     }
 
     public Person(String personId, String legacyId,String surname, String dod) {
@@ -119,19 +119,19 @@ public class Person {
         this.dod = dod;
     }
 	
-    public String getfamilySearchId() {
+    public String getFamilySearchId() {
         return familySearchId;
     }
 	
-    public void setfamilySearchId(String familySearchId) {
+    public void setFamilySearchId(String familySearchId) {
         this.familySearchId = familySearchId;
     }
 
-	public String getfindAGraveId() {
+	public String getFindAGraveId() {
         return findAGraveId;
     }
 	
-    public void setfamilySearchId(String findAGraveId) {
+    public void setFindAGraveId(String findAGraveId) {
         this.findAGraveId = findAGraveId;
     }
 	
