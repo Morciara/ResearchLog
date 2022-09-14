@@ -18,7 +18,7 @@ public interface SourceRepository {
      * @param id        ID of the source to retrieve.
      * @return          The requested Source if found.
      */
-    Optional<Source> findById(Integer id);
+    Optional<Source> findById(String id);
 
     /**
      * Returns all sources in the database.
@@ -48,5 +48,5 @@ public interface SourceRepository {
      * @param id        The id of the source to delete.
      * @return          True if the operation was successful.
      */
-    boolean delete(Integer id);
+    boolean delete(String id);
 }
