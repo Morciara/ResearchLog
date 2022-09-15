@@ -13,7 +13,7 @@ public interface ArchiveService {
      * @param id        ID of the archive to retrieve.
      * @return          The requested Archive if found.
      */
-    Optional<Archive> findById(Integer id);
+    Optional<Archive> findById(String id);
 
     /**
      * Returns all archive in the database.
@@ -43,5 +43,5 @@ public interface ArchiveService {
      * @param id        The id of the archive to delete.
      * @return          True if the operation was successful.
      */
-    boolean delete(Integer id);
+    boolean delete(String id);
 }
