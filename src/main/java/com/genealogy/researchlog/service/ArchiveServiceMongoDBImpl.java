@@ -9,17 +9,22 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public interface ArchiveServiceMongoDBImpl implements ArchiveService {
+public class ArchiveServiceMongoDBImpl implements ArchiveService {
     
     private static final Logger logger = LogManager.getLogger(ArchiveServiceMongoDBImpl.class);
+    
+    private final ArchiveRepository archiveRepository;
+    
+    public ArchiveServiceMongoDBImpl (ArchiveRepository archiveRepository){
+         this.archiveRepository = archiveRepository;
+        }
     
    
     @Override
     public Optional<Archive> findById(String id){
          Archive archive = new Archive();
          logger.info("Find archive with id: {}", id);
-         return archive;
-        //return productRepository.findById(id);
+         return archive.findById(id);
     }
     
     @Override
