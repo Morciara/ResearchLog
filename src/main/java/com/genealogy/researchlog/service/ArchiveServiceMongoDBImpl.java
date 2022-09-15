@@ -24,7 +24,7 @@ public class ArchiveServiceMongoDBImpl implements ArchiveService {
     @Override
     public Optional<Archive> findById(String id){
          logger.info("Find archive with id: {}", id);
-         return archive.findById(id);
+         return archiveRepository.findById(id);
     }
     
     /*@Override
