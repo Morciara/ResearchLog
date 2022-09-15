@@ -4,7 +4,6 @@ import com.genealogy.researchlog.model.Archive;
 
 import java.util.List;
 import java.util.Optional;
-import com.genealogy.researchlog.model.Archive;
 
 public interface ArchiveService {
     /**
