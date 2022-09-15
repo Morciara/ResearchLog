@@ -26,11 +26,10 @@ public interface ArchiveServiceMongoDBImpl implements ArchiveService {
     public Archive save(Archive archive);
 
     @Override    
-    public boolean delete(String id);
-    {
+    public boolean delete(String id) {
         logger.info("Delete Archive with id: {}", id);
         return false;
-        //return productRepository.delete(id);
+        //return archiveRepository.delete(id);
     }
 }
 
