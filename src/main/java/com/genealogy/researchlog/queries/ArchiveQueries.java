@@ -15,15 +15,22 @@ import com.genealogy.researchlog.model.Archive;
 public class ArchiveQueries{
     private MongoTemplate mongoTemplate;
 	
-	public ArchiveQueries(MongoTemplate mongoTemplate){
-	    this.mongoTemplate = mongoTemplate;
-		}
+    public ArchiveQueries(MongoTemplate mongoTemplate){
+	   this.mongoTemplate = mongoTemplate;
+	}
 	
- 	public Archive findByArchiveName(String name){
+    public Archive findByArchiveName(String name){
 	   Query byArchiveName = new Query()
 		.addCriteria(Criteria.where("name").is(name));
 		
-		return this.mongoTemplate.find(byArchiveName, Archive.class);
-		}	
+	    return this.mongoTemplate.find(byArchiveName, Archive.class);
+	}
+	
+    public Archive findByArchiveId(String Id){
+	   Query byArchiveId = new Query()
+		.addCriteria(Criteria.where("Id").is(Id));
+		
+	    return this.mongoTemplate.find(byArchiveId, Archive.class);
+	}	
 	
 }
