@@ -26,10 +26,9 @@ public class ArchiveServiceMongoDBImpl implements ArchiveService {
          return archive.findById(id);
     }
     
-    @Override
-   // public List<Archive> findAll(){
-      public Archive findAll(){
-        logger.info("Find all archives");
+    /*@Override
+      public List<Archive> findAll(){
+      logger.info("Find all archives");
         return archive;
        // return archiveRepository.findAll();
     }
@@ -56,6 +55,6 @@ public class ArchiveServiceMongoDBImpl implements ArchiveService {
         logger.info("Delete Archive with id: {}", id);
         return false;
         //return archiveRepository.delete(id);
-    }
+    }*/
 }
 
