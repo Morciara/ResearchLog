@@ -8,7 +8,7 @@ import java.util.Optional;
 import com.genealogy.researchlog.model.Archive;
 
 @Service
-public class ArchiveServiceImplMongoDB implements ArchiveService {
+public class ArchiveServiceMongoDBImpl implements ArchiveService {
     //todo need to implement
     
     
