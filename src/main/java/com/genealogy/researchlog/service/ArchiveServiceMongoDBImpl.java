@@ -8,22 +8,45 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public interface ArchiveServiceMongoDBImpl implements ArchiveService {
     
     private static final Logger logger = LogManager.getLogger(ArchiveServiceMongoDBImpl.class);
     
    
     @Override
-    public Optional<Archive> findById(String id);
+    public Optional<Archive> findById(String id){
+         Archive archive = new Archive();
+         logger.info("Find archive with id: {}", id);
+         return archive;
+        //return productRepository.findById(id);
+    }
     
     @Override
-    public List<Archive> findAll();
+   // public List<Archive> findAll(){
+      public Archive findAll(){
+        Archive archive = new Archive();
+        logger.info("Find all archives");
+        return archive;
+       // return archiveRepository.findAll();
+    }
 
     @Override
-    public boolean update(Archive archive);
+    public boolean update(Archive archive){
+        logger.info("Update archive: {}", archive);
+        return false;
+     //   return productRepository.update(product);
+    }
     
     @Override
-    public Archive save(Archive archive);
+    public Archive save(Archive archive){
+        // Set the product version to 1 as we're adding a new product to the database
+        //product.setVersion(1);
+
+        logger.info("Save archive to the database: {}", archive);
+        return archive;
+       // return productRepository.save(product);
+    }
 
     @Override    
     public boolean delete(String id) {
