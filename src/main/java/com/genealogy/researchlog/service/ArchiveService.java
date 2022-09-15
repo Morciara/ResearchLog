@@ -19,7 +19,7 @@ public interface ArchiveService {
      *
      * @return          All archive in the database.
      */
-    List<Archive> findAll();
+   // List<Archive> findAll();
 
     /**
      * Updates the specified archive, identified by its id.
@@ -27,7 +27,7 @@ public interface ArchiveService {
      * @param archive   The archive to update.
      * @return          True if the update succeeded, otherwise false.
      */
-    boolean update(Archive archive);
+  //  boolean update(Archive archive);
 
     /**
      * Saves the specified archive to the database.
@@ -35,12 +35,12 @@ public interface ArchiveService {
      * @param archive   The archive to save to the database.
      * @return          The saved archive.
      */
-    Archive save(Archive archive);
+//    Archive save(Archive archive);
 
     /**
      * Deletes the archive with the specified id.
      * @param id        The id of the archive to delete.
      * @return          True if the operation was successful.
      */
-    boolean delete(String id);
+   // boolean delete(String id);  
 }
