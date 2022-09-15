@@ -1,7 +1,6 @@
 package com.genealogy.researchlog.repository;
 
 import com.genealogy.researchlog.model.Archive;
-import org.springframework.context.annotation.Bean;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +10,7 @@ import java.util.Optional;
  */
 
 public interface ArchiveRepository {
-    @Bean
+
     /**
      * Returns the archive with the specified id.
      *
