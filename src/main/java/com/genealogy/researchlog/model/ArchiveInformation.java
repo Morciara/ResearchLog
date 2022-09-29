@@ -2,16 +2,18 @@ package com.genealogy.researchlog.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 
-@Document("Archive")
-public class Archive {
+@Document(collection = "Archive")
+public class ArchiveInformation {
    @Id
    private String id;
    @Field("name")
-   @Indexed
+   @Indexed(unique = false)
+   @TextIndexed(weight = 2)
    private String name;
     @Field("address")
     private String streetAddress;
@@ -19,22 +21,23 @@ public class Archive {
     private String city;
     @Field("state")
     private String state;
+    @TextIndexed(weight = 2)
     @Field("web_site")
     private String webSite;
     @Field("email_address")
     private String emailAddress;
 
    
-    public Archive() {
+    public ArchiveInformation() {
     }
 
-    public Archive(String name, String id) {
+    public ArchiveInformation(String name, String id) {
         this.name = name;
         this.id = id;
     }
 
-    public Archive(String id, String name, String streetAddress, String city,
-                   String state, String webSite, String emailAddress) {
+    public ArchiveInformation(String id, String name, String streetAddress, String city,
+                              String state, String webSite, String emailAddress) {
         this.id = id;
         this.name = name;
         this.streetAddress = streetAddress;
@@ -44,7 +47,7 @@ public class Archive {
     		this.emailAddress = emailAddress;
     }
 
-    public Archive(String id, String name, String webSite) {
+    public ArchiveInformation(String id, String name, String webSite) {
 
         this.id = id;
         this.name = name;
