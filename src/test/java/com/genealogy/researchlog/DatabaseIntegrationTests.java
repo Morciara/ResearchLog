@@ -72,10 +72,10 @@ public class DatabaseIntegrationTests {
     }
 
     @Test
-    void findAllArchiveInformation() {
+    void findAllArchiveInformationTest() {
         logger.info("in tests");
-       // List<ArchiveInformation> queryResult = this.archiveQueries.findAll();
-       // assertEquals(3,queryResult.size());
+        List<ArchiveInformation> queryResult = this.archiveQueries.findAll();
+        assertEquals(3,queryResult.size());
     }
 
 
