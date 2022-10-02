@@ -11,7 +11,7 @@ import java.util.List;
 
 @Service
 public class ApplicationRunner implements CommandLineRunner {
-    private ArchiveInformationRepository archiveInformationRepository;
+    private final ArchiveInformationRepository archiveInformationRepository;
 
     public ApplicationRunner(ArchiveInformationRepository archiveInformationRepository) {
         this.archiveInformationRepository = archiveInformationRepository;
@@ -32,21 +32,3 @@ public class ApplicationRunner implements CommandLineRunner {
 
 }
 
-/*private ArchiveQueries archiveQueries;
-
-   public ApplicationRunner(ArchiveQueries archiveQueries){
-        this.archiveQueries = archiveQueries;
-
-         logger.info("Query: First Archive in collection ");
-        List<ArchiveInformation> allArchives = this.archiveQueries.findAll("archive", 0, 3);
-        String firstArchive = allArchives.get(0).getName();
-        logger.info("First Archive {} ", firstArchive);
-
-        ArchiveInformation archiveInformation = this.archiveQueries.findOneByArchiveName(firstArchive);
-        logger.info("Archive website {} ", archiveInformation.getWebSite());
-
-
-    }
-
-    }
-*/

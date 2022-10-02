@@ -9,12 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "Archive")
 public class ArchiveInformation {
-   @Id
-   private String id;
-   @Field("name")
-   @Indexed(unique = false)
-   @TextIndexed(weight = 2)
-   private String name;
+    @Id
+    private String id;
+    @Field("name")
+    @Indexed(unique = false)
+    @TextIndexed(weight = 2)
+    private String name;
     @Field("address")
     private String streetAddress;
     @Field("city")
@@ -27,7 +27,7 @@ public class ArchiveInformation {
     @Field("email_address")
     private String emailAddress;
 
-   
+
     public ArchiveInformation() {
     }
 
@@ -42,9 +42,9 @@ public class ArchiveInformation {
         this.name = name;
         this.streetAddress = streetAddress;
         this.city = city;
-	    	this.state = state;
-    		this.webSite = webSite;
-    		this.emailAddress = emailAddress;
+        this.state = state;
+        this.webSite = webSite;
+        this.emailAddress = emailAddress;
     }
 
     public ArchiveInformation(String id, String name, String webSite) {
@@ -53,7 +53,7 @@ public class ArchiveInformation {
         this.name = name;
         this.webSite = webSite;
     }
-	
+
     public String getId() {
         return id;
     }
@@ -86,14 +86,14 @@ public class ArchiveInformation {
         this.city = city;
     }
 
-   public String getState() {
+    public String getState() {
         return state;
     }
 
     public void setState(String state) {
         this.state = state;
     }
-   
+
     public String getWebSite() {
         return webSite;
     }
@@ -101,7 +101,7 @@ public class ArchiveInformation {
     public void setWebSite(String webSite) {
         this.webSite = webSite;
     }
-	
+
     public String getEmailAddress() {
         return emailAddress;
     }
@@ -112,7 +112,7 @@ public class ArchiveInformation {
 
     @Override
     public String toString() {
-        return "Repository{" +
+        return "Archive{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", website=" + webSite +

@@ -23,7 +23,7 @@ public class Source {
     @Field("Notes")
     @Indexed
     private String sourceNotes;
-   
+
     public Source() {
     }
 
@@ -38,9 +38,9 @@ public class Source {
         this.sourceName = sourceName;
         this.archiveId = archiveId;
         this.author = author;
-	this.callNbr = callNbr;
-	this.sourceNotes = sourceNotes;
-		
+        this.callNbr = callNbr;
+        this.sourceNotes = sourceNotes;
+
     }
 
     public Source(String sourceId, String sourceName, String archiveId) {
@@ -48,7 +48,7 @@ public class Source {
         this.sourceName = sourceName;
         this.archiveId = archiveId;
     }
-	
+
     public String getSourceId() {
         return sourceId;
     }
@@ -99,7 +99,7 @@ public class Source {
 
     @Override
     public String toString() {
-        return "Souce{" +
+        return "Source{" +
                 "id=" + sourceId +
                 ", name='" + sourceName + '\'' +
                 ", author=" + author +

@@ -67,7 +67,6 @@ public class DatabaseIntegrationTests {
 
     @AfterEach
     public void afterEach() {
-
         this.mongoTemplate.dropCollection(ArchiveInformation.class);
     }
 
