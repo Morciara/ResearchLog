@@ -2,55 +2,58 @@ package com.genealogy.researchlog.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 
-@Document("Archive")
-public class Archive {
-   @Id
-   private String id;
-   @Field("name")
-   @Indexed
-   private String name;
+@Document(collection = "Archive")
+public class ArchiveInformation {
+    @Id
+    private String id;
+    @Field("name")
+    @Indexed(unique = false)
+    @TextIndexed(weight = 2)
+    private String name;
     @Field("address")
     private String streetAddress;
     @Field("city")
     private String city;
     @Field("state")
     private String state;
+    @TextIndexed(weight = 2)
     @Field("web_site")
     private String webSite;
     @Field("email_address")
     private String emailAddress;
 
-   
-    public Archive() {
+
+    public ArchiveInformation() {
     }
 
-    public Archive(String name, String id) {
+    public ArchiveInformation(String name, String id) {
         this.name = name;
         this.id = id;
     }
 
-    public Archive(String id, String name, String streetAddress, String city,
-                   String state, String webSite, String emailAddress) {
+    public ArchiveInformation(String id, String name, String streetAddress, String city,
+                              String state, String webSite, String emailAddress) {
         this.id = id;
         this.name = name;
         this.streetAddress = streetAddress;
         this.city = city;
-	    	this.state = state;
-    		this.webSite = webSite;
-    		this.emailAddress = emailAddress;
+        this.state = state;
+        this.webSite = webSite;
+        this.emailAddress = emailAddress;
     }
 
-    public Archive(String id, String name, String webSite) {
+    public ArchiveInformation(String id, String name, String webSite) {
 
         this.id = id;
         this.name = name;
         this.webSite = webSite;
     }
-	
+
     public String getId() {
         return id;
     }
@@ -83,14 +86,14 @@ public class Archive {
         this.city = city;
     }
 
-   public String getState() {
+    public String getState() {
         return state;
     }
 
     public void setState(String state) {
         this.state = state;
     }
-   
+
     public String getWebSite() {
         return webSite;
     }
@@ -98,7 +101,7 @@ public class Archive {
     public void setWebSite(String webSite) {
         this.webSite = webSite;
     }
-	
+
     public String getEmailAddress() {
         return emailAddress;
     }
@@ -109,7 +112,7 @@ public class Archive {
 
     @Override
     public String toString() {
-        return "Repository{" +
+        return "Archive{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", website=" + webSite +
